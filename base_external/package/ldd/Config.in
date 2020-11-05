@@ -1,0 +1,6 @@
+
+config BR2_PACKAGE_LDD
+	bool "ldd"
+	help
+	  Includes misc-modules and scull packages
+	  Used to understand buildroot external trees and package builds.
