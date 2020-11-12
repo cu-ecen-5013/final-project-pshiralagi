@@ -5,7 +5,7 @@
 #
 ##############################################################
 
-AESD_ASSIGNMENTS_VERSION = c7c889c2bcb5034e68cb41104041698ec48e8907
+AESD_ASSIGNMENTS_VERSION = 62027edf8e000b8878eb5e1e85cdd6915cf46f9f
 # Note: Be sure to reference the *ssh* repository URL here (not https) to work properly
 # with ssh keys and the automated build/test system.
 # Your site should start with git@github.com:
@@ -20,8 +20,8 @@ endef
 define AESD_ASSIGNMENTS_INSTALL_TARGET_CMDS
 	$(INSTALL) -d 0755 $(@D)/conf/ $(TARGET_DIR)/usr/bin/conf/
 	$(INSTALL) -m 0755 $(@D)/conf/* $(TARGET_DIR)/usr/bin/conf/
-	$(INSTALL) -m 0755 $(@D)/adxl335/adxl335 $(TARGET_DIR)/usr/bin/
-	$(INSTALL) -m 0755 $(@D)/adxl-start-stop.sh $(TARGET_DIR)/etc/init.d/S99adxl335
+	$(INSTALL) -m 0755 $(@D)/socket/server $(TARGET_DIR)/usr/bin/
+	$(INSTALL) -m 0755 $(@D)/server-start-stop.sh $(TARGET_DIR)/etc/init.d/S99server
 endef
 
 $(eval $(generic-package))
